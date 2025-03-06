@@ -14,11 +14,11 @@ def main():
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
-    print(f"found {wordCount(text)} total words")
+    print(f"Found {wordCount(text)} total words")
     print("--------- Character Count -------")
     sorted_dict=sort_dict(count)
     for key, value in sorted_dict.items():
-        print(key,": ", value)
+        print(f"{key}: {value}")
     print("============= END ===============")
 
 
