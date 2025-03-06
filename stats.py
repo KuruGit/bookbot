@@ -3,10 +3,12 @@ def wordCount(text):
     num = len(list)
     return num
  
-def sort_dict(dict):
-    for key in dict:
-        if !key.isalpha():
-            del dict[key]
-    dict(sorted(dict.items()))
-    return dict
+def sort_dict(symb):
+    alpha_dict = {}
+    for key in symb:
+        if key.isalpha():
+            alpha_dict[key] = symb[key]  
+    symb = alpha_dict
+    dict(sorted(symb.items()))
+    return symb
     

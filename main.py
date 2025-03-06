@@ -17,7 +17,7 @@ def main():
     print(f"{wordCount(text)} words found in the document")
     print("--------- Character Count -------")
     print(sort_dict(count))
-    print(============= END ===============)
+    print("============= END ===============")
 
 
 if __name__ == "__main__":
