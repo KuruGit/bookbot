@@ -1,3 +1,4 @@
+import sys
 from stats import wordCount
 from stats import sort_dict
 from collections import Counter
@@ -7,12 +8,22 @@ def getBook(path_to_file):
         text = file.read()
     return text
 
+def filepath(args):
+    path = ""
+    if len(args) < 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    else:
+        path = args[1]
+    return path
+
 def main():
-    text = getBook('books/frankenstein.txt')
+    bookPath = filepath(sys.argv)  
+    text = getBook(bookPath)
     text2 = text.lower()
     count = Counter(text2)
     print("============ BOOKBOT ============")
-    print("Analyzing book found at books/frankenstein.txt...")
+    print(f"Analyzing book found at {bookPath}...")
     print("----------- Word Count ----------")
     print(f"Found {wordCount(text)} total words")
     print("--------- Character Count -------")
